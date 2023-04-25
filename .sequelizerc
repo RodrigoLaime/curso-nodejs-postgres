@@ -1,0 +1,9 @@
+const path = require('path');
+
+module.exports = {
+  // indicar donde se encuentra la configuracio que indica cual es la coneccion a la db
+  'config': path.resolve('db', 'config.js'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations')
+}
