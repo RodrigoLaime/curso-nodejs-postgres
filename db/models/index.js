@@ -4,8 +4,8 @@ const {Customer,CustomerSchema} = require("./customer.model");
 
 // configuracion de los modelos
 function setupModels(sequelize) {
-  //le indica que este modelo tiene que tener o seguir este eschema
-  // iniciamos, le pasamos el schema, una configuracion al cul le pasamos la coneccion al modelo de usuario
+  //le indica que este modelo tiene que  seguir este eschema
+  // iniciamos, le pasamos el schema, una configuracion al cual le pasamos la coneccion al modelo de usuario
   User.init(UserSchema, User.config(sequelize));
   Customer.init(CustomerSchema, Customer.config(sequelize));
 

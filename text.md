@@ -56,5 +56,19 @@ dialect: 'mysql',
 
 
 
-y la url enves de postgres poner mysql
-a
+## al crear la migracion add-role agregar ala migracion
+'use strict';
+
+const {UserSchema, USER_TABLE} = require("../models/user.model");
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up (queryInterface) {
+    await queryInterface.addColumn(USER_TABLE, 'role', UserSchema.role);
+  },
+
+  async down (queryInterface) {
+    await queryInterface.removeColumn(USER_TABLE, 'role');
+  }
+};
+
